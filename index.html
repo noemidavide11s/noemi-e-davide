@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Il matrimonio di Noemi & Davide: scopri la nostra storia, il programma dell'evento, il menu nuziale, il tuo posto al tavolo e conferma la tua presenza.">
+    <meta name="robots" content="noindex, nofollow">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:title" content="Noemi &amp; Davide — 11 Settembre 2027">
+    <meta property="og:description" content="Siete invitati al nostro matrimonio. Aprite la partecipazione e confermate la vostra presenza.">
+    <!-- Anteprima del link su WhatsApp: dopo la pubblicazione sostituisci con l'indirizzo completo del sito, ad es.
+         <meta property="og:image" content="https://TUOUSER.github.io/NOMEREPO/og-image.jpg"> -->
+    <meta name="theme-color" content="#4a6351">
+    <title>Noemi &amp; Davide — Il nostro Matrimonio</title>
+
+    <!-- Google Fonts Premium: Cormorant Garamond & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Fogli di stile e script -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="config.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#contenuto">Vai al contenuto principale</a>
+
+    <!-- ============================================================
+         INTRODUZIONE: PARTECIPAZIONE CON BUSTA & CERALACCA
+         ============================================================ -->
+    <section class="intro" id="intro" aria-labelledby="introTitle">
+        <div class="intro__content">
+            <p class="intro__eyebrow" id="introEyebrow">Un invito speciale per te</p>
+
+            <div class="envelope" id="weddingEnvelope" role="button" tabindex="0" aria-label="Clicca per aprire la partecipazione di nozze">
+                <div class="envelope__back"></div>
+                <div class="envelope__letter">
+                    <span id="envelopeInitials">N &amp; D</span>
+                    <i>per sempre</i>
+                    <small id="envelopeDate">11 Settembre 2027</small>
+                </div>
+                <div class="envelope__front"></div>
+                <div class="envelope__flap"></div>
+                <div class="envelope__seal" id="envelopeSeal">ND</div>
+            </div>
+
+            <h1 id="introTitle">Noemi &amp; Davide</h1>
+            <p class="intro__lead" id="introLead">Stiamo per iniziare il nostro viaggio più bello e desideriamo averti al nostro fianco.</p>
+
+            <div class="intro__actions">
+                <button class="btn-luxury" id="openExperience" type="button">
+                    <span id="openIntroBtnText">Apri la Partecipazione</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+                <button class="intro__silent" id="openWithoutMusic" type="button">
+                    <span id="silentIntroBtnText">Entra senza musica</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         HEADER DEL SITO CON MONOGRAMMA, MENU & AUDIO
+         ============================================================ -->
+    <header class="site-header" aria-label="Intestazione principale">
+        <a class="monogram" href="#inizio" aria-label="Torna all'inizio">
+            <span id="monogramFirst">N</span><i aria-hidden="true">&amp;</i><span id="monogramSecond">D</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Navigazione del matrimonio">
+            <a href="#storia">La Nostra Storia</a>
+            <a href="#programma">Programma</a>
+            <a href="#location">Location</a>
+            <a href="#menu">Menu</a>
+            <a href="#rsvp">RSVP</a>
+        </nav>
+
+        <div class="header-actions">
+            <button class="audio-btn" id="audioToggle" type="button" aria-pressed="false" aria-label="Riproduci o metti in pausa la musica di sottofondo">
+                <div class="wave-icon" aria-hidden="true">
+                    <span></span><span></span><span></span>
+                </div>
+                <span id="audioLabel">Il regalo più grande</span>
+            </button>
+
+            <button class="mobile-nav-toggle" id="mobileNavToggle" type="button" aria-label="Apri menu di navigazione" aria-expanded="false" aria-controls="mobileMenuOverlay">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <audio id="bgAudio" loop preload="metadata">
+            <source src="music/music.mp3" type="audio/mpeg">
+        </audio>
+    </header>
+
+    <!-- Menu a tendina per dispositivi mobili -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay" aria-hidden="true">
+        <a href="#storia">La Nostra Storia</a>
+        <a href="#programma">Programma della Giornata</a>
+        <a href="#location">I Luoghi</a>
+        <a href="#menu">Il Menu Nuziale</a>
+        <a href="#lettera">La Nostra Lettera</a>
+        <a href="#rsvp">Conferma Presenza (RSVP)</a>
+    </div>
+
+    <!-- ============================================================
+         CONTENUTO PRINCIPALE
+         ============================================================ -->
+    <main id="contenuto">
+        <!-- 1. HERO SECTION CON VIDEO & COUNTDOWN -->
+        <section class="hero" id="inizio" aria-labelledby="heroNames" tabindex="-1">
+            <div class="hero__inner reveal">
+                <p class="hero__eyebrow" id="heroEyebrow">Il nostro giorno speciale</p>
+                <h1 class="hero__title">
+                    <span id="heroNames">Noemi &amp; Davide</span>
+                    <em id="heroPromise">Insieme, verso il nostro per sempre.</em>
+                </h1>
+                <!-- Data del matrimonio in grande -->
+                <div class="hero__date-block" aria-label="Sabato 11 Settembre 2027, ore 11:00">
+                    <span class="hero__weekday" id="heroWeekday">Sabato</span>
+                    <div class="hero__date-big" aria-hidden="true">
+                        <span class="hero__month" id="heroMonth">Settembre</span>
+                        <span class="hero__day" id="heroDay">11</span>
+                        <span class="hero__year" id="heroYear">2027</span>
+                    </div>
+                    <div class="hero__date" id="heroDate">Faggiano (TA) · Ore 11:00</div>
+                </div>
+
+                <!-- Box Conto alla Rovescia -->
+                <div class="countdown-box reveal">
+                    <p class="countdown-box__title" id="countdownTitle">Il grande giorno si avvicina</p>
+                    <div class="countdown-grid">
+                        <div class="countdown-item">
+                            <span class="number" id="cdDays">00</span>
+                            <span class="label">Giorni</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="number" id="cdHours">00</span>
+                            <span class="label">Ore</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="number" id="cdMinutes">00</span>
+                            <span class="label">Minuti</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="number" id="cdSeconds">00</span>
+                            <span class="label">Secondi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. CITAZIONE MANIFESTO -->
+        <section class="manifesto" aria-label="Dedica degli sposi">
+            <blockquote id="manifestoText">«L'amore non è guardarsi l'un l'altro, ma guardare insieme nella stessa direzione.»</blockquote>
+        </section>
+
+        <!-- 3. SEZIONE LA NOSTRA STORIA -->
+        <section class="section" id="storia" aria-labelledby="storyHeading">
+            <div class="section-shell">
+                <div class="section-heading reveal">
+                    <p class="eyebrow" id="storyEyebrow">Il nostro cammino</p>
+                    <h2 id="storyHeading"><span id="storyTitle">Come è nata la nostra favola</span></h2>
+                    <p class="lead" id="storyHighlight">Da quel primo incontro abbiamo capito che ogni giorno insieme sarebbe stato una scelta meravigliosa.</p>
+                    <div class="botanical-divider" aria-hidden="true">❦</div>
+                </div>
+
+                <div class="story-timeline" id="storyTimeline">
+                    <!-- Generato dinamicamente via JS da config.storia.tappe -->
+                </div>
+
+                <!-- Carosello foto della coppia -->
+                <div class="gallery reveal" aria-label="Fotografie di Noemi e Davide">
+                    <div class="gallery-viewport" id="galleryViewport" tabindex="0">
+                        <div class="gallery-track" id="galleryTrack">
+                            <!-- Generato dinamicamente da config.galleria.foto -->
+                        </div>
+                    </div>
+                    <div class="gallery-controls">
+                        <button class="gallery-ctrl-btn" id="galleryPrev" type="button" aria-label="Foto precedenti">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+                        </button>
+                        <button class="gallery-ctrl-btn" id="galleryNext" type="button" aria-label="Foto successive">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SEZIONE PROGRAMMA DELLA GIORNATA -->
+        <section class="section section--tinted" id="programma" aria-labelledby="timelineHeading">
+            <div class="section-shell">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">La giornata</p>
+                    <h2 id="timelineHeading">I momenti del nostro <em>giorno</em></h2>
+                    <p class="lead">Condividiamo insieme ogni istante della celebrazione, dalla cerimonia fino alla festa serale.</p>
+                    <div class="botanical-divider" aria-hidden="true">❦</div>
+                </div>
+
+                <div class="timeline-grid" id="timelineGrid">
+                    <!-- Generato dinamicamente da config.timeline.eventi -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. SEZIONE I LUOGHI / LOCATION -->
+        <section class="section" id="location" aria-labelledby="locationHeading">
+            <div class="section-shell">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Come raggiungerci</p>
+                    <h2 id="locationHeading">I luoghi della <em>celebrazione</em></h2>
+                    <p class="lead">Tutte le indicazioni stradali con navigatore per vivere la giornata senza pensieri.</p>
+                    <div class="botanical-divider" aria-hidden="true">❦</div>
+                </div>
+
+                <div class="locations-grid" id="locationsGrid">
+                    <!-- Generato dinamicamente da config.location.luoghi -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. SEZIONE MENU DEL MATRIMONIO -->
+        <section class="section section--tinted" id="menu" aria-labelledby="menuHeading">
+            <div class="section-shell">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Percorso enogastronomico</p>
+                    <h2 id="menuHeading">Il Menu <em>Nuziale</em></h2>
+                    <p class="lead">Sapori autentici, eccellenze del territorio e abbinamenti studiati per festeggiare insieme.</p>
+                    <div class="botanical-divider" aria-hidden="true">❦</div>
+                </div>
+
+                <!-- Schede per portate -->
+                <div class="menu-tabs" id="menuTabs">
+                    <!-- Generato dinamicamente -->
+                </div>
+
+                <!-- Contenuto portate -->
+                <div class="menu-content" id="menuContent">
+                    <!-- Generato dinamicamente -->
+                </div>
+
+                <div class="menu-notice" id="menuNotice">
+                    <!-- Nota intolleranze generata dinamicamente -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. SEZIONE LETTERA DI RINGRAZIAMENTO -->
+        <section class="section letter-section" id="lettera" aria-labelledby="letterTitle">
+            <div class="section-shell--narrow">
+                <article class="letter-sheet reveal">
+                    <p class="letter-sheet__eyebrow">Dal profondo del cuore</p>
+                    <h2 class="letter-sheet__title" id="letterTitle">Un grazie sincero</h2>
+                    
+                    <div class="letter-sheet__paragraphs" id="letterParagraphs">
+                        <!-- Generato dinamicamente -->
+                    </div>
+
+                    <p class="letter-sheet__signoff" id="letterSignoff">Con tutto il nostro affetto,</p>
+                    <p class="letter-sheet__signature" id="letterSignature">Noemi &amp; Davide</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- 10. SEZIONE CONFERMA PRESENZA (RSVP) -->
+        <section class="section" id="rsvp" aria-labelledby="rsvpHeading">
+            <div class="section-shell">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Conferma di presenza</p>
+                    <h2 id="rsvpHeading">Sarai dei <em>nostri?</em></h2>
+                    <p class="lead">Ti preghiamo di confermare la tua presenza entro il 30 Giugno 2027 per aiutarci a organizzare al meglio ogni dettaglio.</p>
+                    <div class="botanical-divider" aria-hidden="true">❦</div>
+                </div>
+
+                <div class="rsvp-card reveal">
+                    <form class="rsvp-form" id="rsvpForm">
+                        <div class="form-group">
+                            <label for="rsvpName">Nome e Cognome dell'invitato / Famiglia *</label>
+                            <input class="form-control" id="rsvpName" type="text" placeholder="Es. Andrea Stella, Famiglia Rossi..." required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Parteciperai all'evento? *</label>
+                            <div class="rsvp-radio-group">
+                                <label class="radio-card">
+                                    <input type="radio" name="attendance" value="Sì, confermo con gioia la mia presenza! 🥂" checked>
+                                    <span>Sì, ci sarò con gioia! 🥂</span>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="attendance" value="Purtroppo non potrò essere presente, ma vi auguro il meglio! ❤️">
+                                    <span>Purtroppo non potrò esserci ❤️</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="rsvpGuests">Numero di persone (incluso te) *</label>
+                                <select class="form-control" id="rsvpGuests">
+                                    <option value="1 persona">1 persona</option>
+                                    <option value="2 persone" selected>2 persone</option>
+                                    <option value="3 persone">3 persone</option>
+                                    <option value="4 persone">4 persone</option>
+                                    <option value="5+ persone">5 o più persone</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="rsvpDiet">Esigenze alimentari / Intolleranze</label>
+                                <select class="form-control" id="rsvpDiet">
+                                    <!-- Popolato dinamicamente da config.rsvp.opzioniDieta -->
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="rsvpNotes">Una dedica o note per gli sposi</label>
+                            <textarea class="form-control" id="rsvpNotes" rows="3" placeholder="Scrivi un pensiero, una canzone che vorresti ballare o un dettaglio speciale..."></textarea>
+                        </div>
+
+                        <div class="rsvp-actions">
+                            <button class="btn-whatsapp" type="submit">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.888 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                                <span>Invia Conferma via WhatsApp</span>
+                            </button>
+                        </div>
+
+                        <div class="rsvp-feedback" id="rsvpFeedback"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================================
+         LIGHTBOX MODAL PER VISUALIZZAZIONE FOTO FULLSCREEN
+         ============================================================ -->
+    <div class="lightbox" id="photoLightbox" role="dialog" aria-modal="true" aria-label="Visualizzatore fotografia a schermo intero">
+        <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Chiudi visualizzatore">✕</button>
+        <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" type="button" aria-label="Foto precedente">‹</button>
+        <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" type="button" aria-label="Foto successiva">›</button>
+        <figure class="lightbox__figure">
+            <img class="lightbox__image" id="lightboxImage" src="" alt="">
+            <figcaption class="lightbox__caption" id="lightboxCaption"></figcaption>
+        </figure>
+    </div>
+
+    <!-- ============================================================
+         FOOTER ELEGANTE
+         ============================================================ -->
+    <footer class="site-footer">
+        <span class="footer-monogram"><span id="footerMonogramFirst">N</span><i>&amp;</i><span id="footerMonogramSecond">D</span></span>
+        <h2 class="footer-names" id="footerNames">Noemi &amp; Davide</h2>
+        <p class="footer-date" id="footerDate">11 Settembre 2027 · Ore 11:00</p>
+        <div class="footer-hashtag" id="footerHashtag">#NoemiEDavide2027</div>
+        <p class="footer-copy">Realizzato con immenso affetto per Noemi &amp; Davide ✨</p>
+    </footer>
+</body>
+</html>

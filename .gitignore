@@ -1,0 +1,11 @@
+# cartelle e file locali
+.claude/
+*.tmp
+*.bak
+Thumbs.db
+.DS_Store
+
+# codice del vecchio banchetto 3D (non più usato)
+three.min.js
+OrbitControls.js
+table3d.js
