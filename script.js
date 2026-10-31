@@ -401,11 +401,11 @@ function renderGallery(galleriaConfig) {
         </figure>
     ` : `
         <figure class="photo-card" data-index="${i}">
-            <button class="photo-card__button" type="button" aria-label="Ingrandisci foto: ${escapeHtml(f.didascalia)}">
-                <img src="${escapeHtml(f.src)}" alt="${escapeHtml(f.alt)}" loading="lazy">
+            <button class="photo-card__button" type="button" aria-label="Ingrandisci foto: ${escapeHtml(f.alt)}">
+                <img src="${escapeHtml(f.src)}" alt="${escapeHtml(f.alt)}"${f.w && f.h ? ` width="${f.w}" height="${f.h}"` : ""} loading="lazy">
             </button>
-            <figcaption>
-                <span>${escapeHtml(f.didascalia)}</span>
+            <figcaption class="${f.didascalia ? "" : "is-counter-only"}">
+                ${f.didascalia ? `<span>${escapeHtml(f.didascalia)}</span>` : ""}
                 <span>${String(i + 1).padStart(2, "0")} / ${String(foto.length).padStart(2, "0")}</span>
             </figcaption>
         </figure>
@@ -414,8 +414,11 @@ function renderGallery(galleriaConfig) {
     // Lightbox handlers
     const openLightbox = (index) => {
         currentIndex = (index + foto.length) % foto.length;
-        if (lbImg) lbImg.src = foto[currentIndex].src;
-        if (lbCap) lbCap.textContent = foto[currentIndex].didascalia;
+        if (lbImg) {
+            lbImg.src = foto[currentIndex].src;
+            lbImg.alt = foto[currentIndex].alt || "";
+        }
+        if (lbCap) lbCap.textContent = foto[currentIndex].didascalia || "";
         if (lightbox) {
             lightbox.classList.add("is-open");
             document.body.style.overflow = "hidden";

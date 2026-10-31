@@ -20,8 +20,8 @@ const CONFIG = {
         rsvpEntroData: "30 Giugno 2027",
         // Numero WhatsApp che riceve le conferme (RSVP). SOSTITUISCI quello di esempio.
         // Formato: +39 seguito dal cellulare, es. "+393401234567". Il file è pubblico: usa un numero che puoi mostrare.
-        whatsappContatto: "+393331234567",
-        emailContatto: "matrimonio.noemi.davide@gmail.com"
+        whatsappContatto: "+393401587415",
+        emailContatto: "noemi02.giacca@gmail.com"
     },
 
     // 2. PARTECIPAZIONE / BUSTA INIZIALE
@@ -198,7 +198,15 @@ const CONFIG = {
         eyebrow: "Gli attimi più belli",
         titolo: "Album del Matrimonio",
         sottotitolo: "Durante la giornata scatta foto e caricale qui per condividerle con noi!",
-        foto: [], // Vuoto = riquadri bianchi. Aggiungi: { src: "photos/nome.jpg", alt: "...", didascalia: "..." }
+        // Per aggiungere una foto: copiala in photos/ e aggiungi una riga come le altre (w e h = larghezza e altezza in pixel).
+        foto: [
+            { src: "photos/foto-1.jpg", alt: "Noemi e Davide in auto, con un bacio sulla guancia", w: 945, h: 720 },
+            { src: "photos/foto-2.jpg", alt: "Noemi e Davide si baciano davanti al camino", w: 1200, h: 1600 },
+            { src: "photos/foto-3.jpg", alt: "Noemi e Davide seduti accanto a una fontana, sorridenti", w: 1200, h: 1600 },
+            { src: "photos/foto-4.jpg", alt: "Davide in ginocchio con l'anello davanti a Noemi, tra gli applausi degli amici", w: 1600, h: 1066 },
+            { src: "photos/foto-5.jpg", alt: "Noemi e Davide si baciano allo stadio, con la sciarpa del concerto", w: 1200, h: 1600 },
+            { src: "photos/foto-6.jpg", alt: "Noemi e Davide in posa a bordo piscina", w: 1200, h: 1600 }
+        ],
     },
 
     // 12. DEDICA / LETTERA DI NOEMI & DAVIDE AGLI INVITATI

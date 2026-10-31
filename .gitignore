@@ -1,4 +1,5 @@
 # cartelle e file locali
+media/
 .claude/
 *.tmp
 *.bak
